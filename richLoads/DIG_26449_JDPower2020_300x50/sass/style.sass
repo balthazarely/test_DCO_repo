@@ -1,0 +1,154 @@
+//custom variables
+$banner-width: 300px
+$banner-height: 50px
+$border-width: $banner-width - 2px
+$border-height: $banner-height - 2px
+$page-color: #fff
+$font-bold: 'proximanova_extrabold', Helvetica, Arial, sans-serif
+$font-medium: 'proximanova_medium', Helvetica, Arial, sans-serif
+$text-color-primary: #ffffff
+$cta-text-color: black
+
+//BTN Variables
+$btn-left: 218px
+$btn-top: 13px
+$btn-width: 75px
+$btn-height: 22px
+$btn-font-size: 10px
+$cta-button-color: #E41932
+$cta-button-inset-color: #710C19
+$cta-restriction-color: white
+
+body
+	font-family: $font-bold
+	color: $text-color-primary
+	-webkit-font-smoothing: antialiased
+	-moz-font-smoothing: antialiased
+
+#blackborder
+	position: absolute
+	width: $border-width
+	height: $border-height
+	top: 0px
+	left: 0px
+	border: 1px solid #000
+	z-index: 50000
+
+#container
+	position: absolute
+	width: $banner-width
+	height: $banner-height
+	top: 0px
+	left: 0px
+	margin: 0
+	overflow: hidden
+	background: $page-color
+	&:hover
+		#cta-button
+			background-color: darken($cta-button-color, 10%)
+	&:active
+		#cta-button
+			background-color: darken($cta-button-color, 20%)
+			transform: translateY(1px)
+
+.header
+	position: absolute
+	left: 66px
+	top: 8px
+	font-size: 16px
+	line-height: 18px
+	z-index: 16
+	color: white
+	text-align: left
+
+.subhead
+	position: absolute
+	left: 573px
+	top: 2px
+	font-size: 16px
+	line-height: 19px
+	z-index: 16
+	color: #171725
+	text-align: center
+
+#logo
+	position: absolute
+	left: 8px
+	top: 17px
+	width: 42px
+	height: 16px
+	z-index: 20
+
+#award
+	position: absolute
+	left: 232px
+	top: 5px
+	width: 79px
+	height: auto
+	z-index: 20
+	img
+		width: 100%
+		height: 100%
+
+#gradient
+	position: absolute
+	top: 0
+	left: 0
+	width: $banner-width
+	height: $banner-height
+	background: #000010
+	background: -moz-linear-gradient(left,  #000010 0%, #171725 39%, #292938 56%, #525259 100%)
+	background: -webkit-linear-gradient(left,  #000010 0%,#171725 39%,#292938 56%,#525259 100%)
+	background: linear-gradient(to right,  #000010 0%,#171725 39%,#292938 56%,#525259 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000010', endColorstr='#525259',GradientType=0 )
+
+//========= CTA & Logo  =========//	
+#cta-wrapper
+	position: relative
+	top: $btn-top
+	left: $btn-left
+	width: $btn-width
+	height: $btn-height + 10px
+	z-index: 15
+
+#cta-button
+	position: absolute
+	top: 0
+	left: 0
+	width: $btn-width
+	height: $btn-height
+	border-radius: 16px
+	z-index: 10
+	background-color: $cta-button-color
+
+#cta-button-inset
+	position: absolute
+	top: 1px
+	left: 0
+	width: $btn-width
+	height: $btn-height
+	border-radius: 16px
+	z-index: 8
+	background-color: $cta-button-inset-color
+	// transform: translateY(3px)
+
+#cta-text
+	font-family: $font-bold
+	font-size: $btn-font-size
+	color: white
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: $btn-width
+	text-align: center
+
+#restrictions
+	font-family: $font-medium
+	font-size: 8px
+	width: $btn-width
+	position: absolute
+	top: $btn-height + 4px
+	left: 0
+	color: $cta-restriction-color
+	text-align: center
